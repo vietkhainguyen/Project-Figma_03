@@ -352,6 +352,18 @@ button {
   padding-right: 58px;
 }
 
+.bank-card__decor-top {
+  position: absolute;
+  top: 1px;
+  left: 12px;
+}
+
+.bank-card__decor-bot {
+  position: absolute;
+  bottom: 4px;
+  right: 2px;
+}
+
 .transections {
   position: absolute;
   bottom: 310px;
@@ -364,6 +376,14 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 126px;
+}
+
+.transection-label {
+  color: #31456a;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 .transection-control {
@@ -426,6 +446,10 @@ button {
   margin-top: 6px;
 }
 
+.transection-address {
+  margin-top: 6px;
+}
+
 .transection-item:nth-child(2) .transection-money,
 .transection-item:nth-child(4) .transection-money {
   padding-left: 10px;
@@ -457,7 +481,7 @@ button {
 
 .interest {
   position: absolute;
-  bottom: 410px;
+  bottom: 310px;
   left: 360px;
   border-radius: 50%;
   width: 130px;
@@ -519,7 +543,7 @@ button {
 
 .deposite {
   position: absolute;
-  bottom: 464px;
+  bottom: 400px;
   left: -98px;
   width: 174px;
   height: 46px;
