@@ -20,6 +20,7 @@ a {
 body {
   font-size: 1.6rem;
   font-family: "Open Sans", sans-serif;
+  background: #fff;
 }
 
 input,
@@ -45,9 +46,17 @@ button {
 
 .section-label {
   color: var(--color-tertiary);
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.75; /* 175% */
+}
+
+.section-desc {
+  margin-top: 20px;
+  color: var(--color-tertiary);
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.67; /* 166.667% */
 }
 
 .btn {
@@ -63,6 +72,48 @@ button {
   font-size: 1.6rem;
   font-weight: 600;
   line-height: 1.75; /* 175% */
+}
+
+.btn:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+/* Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(218, 100, 100, 0.4);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 20px rgba(218, 100, 100, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(218, 100, 100, 0);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /* Header */
@@ -149,7 +200,6 @@ button {
 /* Hero */
 .hero {
   margin-top: 34px;
-  background: #fff;
 }
 
 .hero__inner {
@@ -191,7 +241,6 @@ button {
 }
 
 .hero__desc {
-  margin-top: 20px;
   color: var(--color-tertiary);
   font-size: 1.8rem;
   font-weight: 400;
@@ -455,34 +504,10 @@ button {
   padding-left: 10px;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(218, 100, 100, 0.4);
-  }
-  70% {
-    transform: scale(1.05);
-    box-shadow: 0 0 0 20px rgba(218, 100, 100, 0);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(218, 100, 100, 0);
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .interest {
   position: absolute;
   bottom: 310px;
-  left: 360px;
+  left: 338px;
   border-radius: 50%;
   width: 130px;
   height: 130px;
@@ -527,18 +552,6 @@ button {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
 }
 
 .deposite {
@@ -629,4 +642,370 @@ button {
 
 .funds-title {
   margin-top: 5px;
+}
+
+/* How */
+.how {
+  margin-top: 160px;
+}
+
+.how__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 230px;
+}
+
+.how__img-wrap {
+  position: relative;
+  width: fit-content;
+}
+
+.how__img-wrap-around {
+  width: 456px;
+  height: 619px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+.how__img-background {
+  position: absolute;
+  top: 46px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.how__card {
+  position: absolute;
+  top: 990px;
+  left: 600px;
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+}
+
+.how__activated {
+  position: absolute;
+  top: 1340px;
+  left: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.how__activated-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  background: #fffdfa;
+  box-shadow: 0px 14px 34px 0px rgba(0, 0, 0, 0.07);
+  width: 226px;
+  height: 70px;
+  flex-shrink: 0;
+  padding: 15px 30px 15px 15px;
+}
+
+.how__activated-label {
+  color: var(--color-primary);
+  font-family: Inter, sans-serif;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.how__activated-noti {
+  margin-top: 5px;
+  color: var(--color-tertiary);
+  font-family: Inter, sans-serif;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.how__content {
+  position: relative;
+  margin-left: 30px;
+}
+
+.how__label {
+  position: relative;
+  margin-left: 30px;
+}
+
+.how__label::before {
+  position: absolute;
+  top: 14px;
+  left: -32px;
+  content: "";
+  width: 18px;
+  height: 2px;
+  background: var(--color-tertiary);
+}
+
+.how__heading {
+  margin-top: 12px;
+}
+
+.how__list {
+  margin-top: 70px;
+}
+
+.how__item + .how__item {
+  margin-top: 30px;
+}
+
+.how__item-title {
+  color: #212832;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.45; /* 145.455% */
+}
+
+.how__item-desc {
+  margin-top: 16px;
+}
+
+/* Feature1 */
+.feature1 {
+  margin-top: 160px;
+}
+
+.feature1__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 130px;
+}
+
+.feature1__label {
+  position: relative;
+  margin-left: 30px;
+}
+
+.feature1__label::before {
+  position: absolute;
+  top: 14px;
+  left: -30px;
+  content: "";
+  width: 18px;
+  height: 2px;
+  background: var(--color-tertiary);
+}
+
+.feature1__heading {
+  margin-top: 12px;
+  width: 470px;
+}
+
+.feature1__desc {
+  margin-top: 20px;
+  width: 470px;
+}
+
+.feature1__list {
+  margin-top: 28px;
+}
+
+.feature1__item {
+  color: #212832;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.67; /* 166.667% */
+}
+
+.feature1__item + .feature1__item {
+  margin-top: 18px;
+}
+
+.feature1__item::before {
+  display: inline-block;
+  content: "";
+  color: var(--color-secondary);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.feature1__btn {
+  margin-top: 38px;
+  cursor: pointer;
+}
+
+.feature1__card {
+  position: relative;
+  width: 482px;
+  height: 322px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: linear-gradient(76deg, #8679e4 11.52%, #7264d6 70.78%);
+  left: -75px;
+  top: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature1-bank-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 161px;
+  padding: 38px 38px 0 38px;
+}
+
+.feature1-bank-card__bot {
+  margin-top: 98px;
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  padding: 0 38px 38px 38px;
+}
+
+.feature1-bank-card__balance-label {
+  color: #fff;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.feature1-bank-card__balance-amount {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.feature1-bank-card__info-right {
+  padding-left: 20px;
+}
+
+.feature1-bank-card__info-valid {
+  color: #fff;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.feature1-bank-card__info-date {
+  margin-top: 4px;
+  color: #fff;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.feature1-bank-card__info-label {
+  color: #fff;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.feature1-bank-card__info-name {
+  margin-top: 4px;
+  color: #fff;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.feature1-bank-card__decor-top {
+  position: absolute;
+  top: 1px;
+  left: 12px;
+}
+
+.feature1-bank-card__decor-bot {
+  position: absolute;
+  bottom: 4px;
+  right: 2px;
+}
+
+.feature1__send {
+  position: absolute;
+  top: -40px;
+  left: 300px;
+  width: 276px;
+  height: 86px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 14px 38px 0px rgba(0, 0, 0, 0.07);
+}
+
+.feature1__send-inner {
+  display: flex;
+  align-items: center;
+}
+
+.feature1__send-info {
+  display: flex;
+  align-items: center;
+}
+
+.feature1__send-type {
+  color: #212832;
+  font-family: Inter, sans-serif;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.feature1__send-address {
+  margin-top: 2px;
+  color: #696d76;
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.feature1__send-money {
+  color: #212832;
+  text-align: right;
+  font-family: Inter, sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.feature1__send-date {
+  margin-top: 2px;
+  color: #696d76;
+  text-align: right;
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.feature1__send-info2 {
+  position: absolute;
+  left: 200px;
 }
