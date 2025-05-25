@@ -178,6 +178,15 @@ button {
   }
 }
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* Header */
 
 .header {
@@ -589,7 +598,7 @@ button {
   align-items: center;
   top: 48px;
   left: 40px;
-  animation: Rotate 2s infinite linear;
+  animation: rotate 2s infinite linear;
 }
 
 .interest-percent {
