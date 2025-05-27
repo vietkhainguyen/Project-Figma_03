@@ -56,6 +56,7 @@ button {
   color: var(--color-tertiary);
   font-size: 1.8rem;
   font-weight: 400;
+  font-style: normal;
   line-height: 1.67; /* 166.667% */
 }
 
@@ -1572,4 +1573,80 @@ button {
 
 .blog__item-read:hover {
   color: var(--color-secondary);
+}
+
+/* CTA */
+.cta {
+  margin-top: 160px;
+}
+
+.cta__inner {
+  padding: 100px 367px;
+  border-radius: 24px;
+  background: #7264d6;
+  height: 466px;
+  position: relative;
+}
+
+.cta__content {
+  text-align: center;
+}
+
+.cta__label {
+  position: relative;
+  color: #fff;
+  margin-left: 30px;
+}
+
+.cta__label::before {
+  position: absolute;
+  top: 12px;
+  left: 140px;
+  content: "";
+  width: 18px;
+  height: 2px;
+  background: #fff;
+}
+
+.cta__heading {
+  margin-top: 12px;
+  color: #fff;
+}
+
+.cta__desc {
+  margin-top: 18px;
+  color: #fff;
+  width: 435px;
+}
+
+.cta__download {
+  margin-top: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 16px;
+}
+
+.cta__decor-svg:first-child {
+  position: absolute;
+  top: 50px;
+  left: 120px;
+}
+
+.cta__decor-svg:nth-child(2) {
+  position: absolute;
+  top: 50px;
+  right: 120px;
+}
+
+.cta__decor-svg:nth-child(3) {
+  position: absolute;
+  bottom: 50px;
+  left: 180px;
+}
+
+.cta__decor-svg:last-child {
+  position: absolute;
+  bottom: 50px;
+  right: 180px;
 }
