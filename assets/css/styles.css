@@ -273,9 +273,11 @@ button {
 
 .header-action {
   margin-left: auto;
+  display: flex;
 }
 
 .header-action__link {
+  margin-top: 12px;
   color: var(--color-primary);
   text-align: center;
   font-size: 1.6rem;
