@@ -101,12 +101,24 @@
     <link rel="stylesheet" href="./assets/css/responsive.css" />
   </head>
   <body>
-    <!-- Header -->
+    <!-- PC Header -->
     <header class="header">
       <div class="container">
         <div class="header__inner">
+          <!-- Tablet/mobile menu -->
+          <label for="menu-checkbox" class="toggle-menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path
+                fill="currentColor"
+                d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+              />
+            </svg>
+          </label>
+
           <!-- Logo -->
-          <img src="./assets/img/Logo.svg" alt="CeloBank" class="logo" />
+          <a href="#">
+            <img src="./assets/img/Logo.svg" alt="CeloBank" class="logo" />
+          </a>
 
           <!-- Navbar -->
           <nav class="navbar">
@@ -135,6 +147,47 @@
       </div>
     </header>
 
+    <!-- Tablet/mobile header -->
+    <header class="mobile-header">
+      <input
+        type="checkbox"
+        name=""
+        id="menu-checkbox"
+        class="menu-checkbox"
+        hidden
+      />
+      <!-- Overlay -->
+      <label for="menu-checkbox" class="menu-overlay"></label>
+      <!-- Content -->
+      <div class="menu-drawer">
+        <!-- Logo -->
+        <a href="#">
+          <img src="./assets/img/Logo.svg" alt="CeloBank" />
+        </a>
+
+        <ul class="navbar__list">
+          <li class="navbar__item">
+            <a href="#!" class="navbar__link">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#!" class="navbar__link">Products</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#!" class="navbar__link">Features</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#!" class="navbar__link">Blog</a>
+          </li>
+          <li class="navbar__item hide-on-tablet separate">
+            <a href="#!" class="navbar__link">Sign in</a>
+          </li>
+          <li class="navbar__item hide-on-tablet">
+            <a href="#!" class="navbar__link">Sign up</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
     <!-- Hero -->
     <section class="hero">
       <div class="container">
@@ -151,11 +204,12 @@
               best platform.
             </p>
 
-            <form action="" class="register-form">
+            <form action="" class="register-form" name="hero-form">
               <input
                 type="email"
                 class="register-form__input"
                 placeholder="Your email address"
+                name="email-input"
               />
               <button type="submit" class="btn register-form__btn">
                 Get Started
@@ -1572,7 +1626,7 @@
             <div class="testimonial__slider">
               <div class="swiper testimonial__swiper">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide testimonial__slide">
+                  <div class="swiper-slide testimonial__slide1">
                     <div class="testimonial__layout">
                       <p class="testimonial__text">
                         Fantastic platform for online banking. The best online
@@ -1611,7 +1665,7 @@
                     </div>
                   </div>
 
-                  <div class="swiper-slide testimonial__slide">
+                  <div class="swiper-slide testimonial__slide2">
                     <div class="testimonial__layout">
                       <p class="testimonial__text">
                         Fantastic platform for online banking. The best online
@@ -2059,12 +2113,13 @@
 
             <div class="footer__form">
               <h4 class="footer__heading">News letter</h4>
-              <form class="footer__form-inner">
+              <form class="footer__form-inner" name="footer-form">
                 <input
                   type="email"
                   class="footer__input"
                   placeholder="Enter address..."
                   required
+                  name="email-address"
                 />
                 <button type="submit" class="footer__button btn">
                   Subscribe
